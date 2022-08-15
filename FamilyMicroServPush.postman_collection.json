@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "f2b4f26e-9f4e-4058-a11f-23244aee9f59",
+		"name": "FamilyMicroServPush",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "14095288"
+	},
+	"item": [
+		{
+			"name": "http://localhost:9000/createFamily/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"getFamily\":{\"idF\":\"1\",\"familyName\":\"Kow\",\"nrOfAdults\":2,\"nrOfChildren\":1,\"nrOfInfants\":1},\r\n\"familyMembers\":[{\"familyId\":\"1\",\"familyName\":\"Kowal\",\"givenName\":\"Anna\",\"age\":\"32\"},{\"familyId\":\"1\",\"familyName\":\"Kowal\",\"givenName\":\"Jan\",\"age\":\"27\"},\r\n{\"familyId\":\"1\",\"familyName\":\"Kowal\",\"givenName\":\"Olga\",\"age\":\"2\"},{\"familyId\":\"1\",\"familyName\":\"Kowal\",\"givenName\":\"Marek\",\"age\":\"10\"}]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:9000/createFamily/"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9000/createFamily/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"getFamily\":{\"idF\":\"1\",\"familyName\":\"Kow\",\"nrOfAdults\":2,\"nrOfChildren\":2,\"nrOfInfants\":0},\r\n\"familyMembers\":[{\"familyId\":\"1\",\"familyName\":\"Nowak\",\"givenName\":\"Anna\",\"age\":\"32\"},{\"familyId\":\"1\",\"familyName\":\"Nowak\",\"givenName\":\"Jan\",\"age\":\"27\"},\r\n{\"familyId\":\"1\",\"familyName\":\"Nowak\",\"givenName\":\"Olga\",\"age\":\"12\"},{\"familyId\":\"1\",\"familyName\":\"Nowak\",\"givenName\":\"Marek\",\"age\":\"10\"}]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:9000/createFamily/"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9000/createFamily/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"getFamily\":{\"idF\":\"1\",\"familyName\":\"Kow\",\"nrOfAdults\":2,\"nrOfChildren\":2,\"nrOfInfants\":1},\r\n\"familyMembers\":[{\"familyId\":\"1\",\"familyName\":\"Nowak\",\"givenName\":\"Anna\",\"age\":\"32\"},{\"familyId\":\"1\",\"familyName\":\"Nowak\",\"givenName\":\"Jan\",\"age\":\"27\"},\r\n{\"familyId\":\"1\",\"familyName\":\"Nowak\",\"givenName\":\"Olga\",\"age\":\"12\"},{\"familyId\":\"1\",\"familyName\":\"Nowak\",\"givenName\":\"Marek\",\"age\":\"10\"}]\r\n}\r\n//Wrong validation example",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:9000/createFamily/"
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,29 @@
+version: "3"
+services:
+  familyapp:
+    build:
+      context: ./FamilyApp
+      dockerfile: Dockerfile
+    depends_on:
+      - db
+    ports:
+      - 9000:8080
+      
+      
+  familymemberapp:
+    build:
+      context: ./FamilyMemberApp
+      dockerfile: Dockerfile
+    depends_on:
+      - db
+    ports:
+      - 9100:8080
+      
+  db:
+    image: postgres:14.1-alpine
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=janekcep
+    ports:
+      - '5432:5432'
