@@ -19,11 +19,20 @@ services:
     ports:
       - 9100:8080
       
+  flyway:
+    image: flyway/flyway
+    command: -url=jdbc:postgresql://postgres:5432/FamilyDB -user=postgres -password=janekcep -connectRetries=60 migrate
+    volumes:
+      - .:/flyway/sql
+    depends_on:
+      - db
+      
   db:
     image: postgres:14.1-alpine
     restart: always
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=janekcep
+      - POSTGRES_DB=FamilyDB
     ports:
       - '5432:5432'
